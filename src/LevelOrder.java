@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class LevelOrder {
@@ -19,9 +20,13 @@ public class LevelOrder {
             this.right = right;
         }
     }
-//    public List<List<Integer>> levelOrder(TreeNode root) {
-//
-//    }
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        List<List<Integer>> level = new ArrayList<>();
+        list.add(root.val);
+
+        return level;
+    }
 
     public void main(String[] args) {
         TreeNode root = new TreeNode(10);

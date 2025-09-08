@@ -1,3 +1,5 @@
+package Solved;
+
 import java.util.Stack;
 //Code Not completed
 public class Reverse_Polish_Notation {
@@ -40,21 +42,21 @@ public class Reverse_Polish_Notation {
         //Another Way of Solving this
 
         Stack<Integer> stack = new Stack<>();
-        for (int i = 0; i < tokens.length; i++) {
-            if(tokens[i].equals("+")){
-                stack.push(stack.pop() + stack.pop());
-            } else if (tokens[i].equals("*")) {
-                stack.push(stack.pop() * stack.pop());
-            } else if (tokens[i].equals("-")) {
-                int num1 = stack.pop();
-                int num2 = stack.pop();
-                stack.push(num2-num1);
-            }else if (tokens[i].equals("/")) {
-                int num1 = stack.pop();
-                int num2 = stack.pop();
-                stack.push(num2/num1);
-            }else {
-                stack.push(Integer.parseInt(tokens[i]));
+        for (String token : tokens) {
+            switch (token) {
+                case "+" -> stack.push(stack.pop() + stack.pop());
+                case "*" -> stack.push(stack.pop() * stack.pop());
+                case "-" -> {
+                    int num1 = stack.pop();
+                    int num2 = stack.pop();
+                    stack.push(num2 - num1);
+                }
+                case "/" -> {
+                    int num1 = stack.pop();
+                    int num2 = stack.pop();
+                    stack.push(num2 / num1);
+                }
+                default -> stack.push(Integer.parseInt(token));
             }
         }
         return stack.peek();
