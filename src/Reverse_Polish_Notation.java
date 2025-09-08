@@ -37,7 +37,6 @@ public class Reverse_Polish_Notation {
 //        if (!stack.isEmpty()){
 //            ans = Integer.parseInt(stack.pop());
 //        }
-
         //Another Way of Solving this
 
         Stack<Integer> stack = new Stack<>();
