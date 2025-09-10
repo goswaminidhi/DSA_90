@@ -1,6 +1,5 @@
 package Solved;
 //The code is completed but not Optimal yet.
-
 import java.util.Stack;
 
 public class MinStack {
