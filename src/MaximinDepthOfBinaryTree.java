@@ -1,12 +1,8 @@
-import Solved.LevelOrder;
-
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
-public class LevelOrderII {
-    class TreeNode {
+public class MaximinDepthOfBinaryTree {
+    public class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -24,16 +20,19 @@ public class LevelOrderII {
             this.right = right;
         }
     }
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
+    public int maxDepth(TreeNode root) {
+        if(root == null){
+            return 0;
+        }
+        int max = 0;
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+
+
+        while(!queue.isEmpty()){
             int size = queue.size();
-            List<Integer> list = new ArrayList<>();
             for (int i = 0; i < size; i++) {
                 TreeNode node = queue.poll();
-                list.add(node.val);
 
                 if(node.left != null){
                     queue.add(node.left);
@@ -41,10 +40,9 @@ public class LevelOrderII {
                 if(node.right != null){
                     queue.add(node.right);
                 }
-
+                max++;
             }
-            result.add(0,list);
         }
-        return result;
+        return max;
     }
 }

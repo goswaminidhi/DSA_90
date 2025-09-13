@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LevelOrder {
+public class LevelOrderII {
     class TreeNode {
         int val;
         TreeNode left;
@@ -24,34 +24,30 @@ public class LevelOrder {
             this.right = right;
         }
     }
-    public List<List<Integer>> levelOrder(TreeNode root) {
-
-        List<List<Integer>> level = new ArrayList<>();
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+        List<List<Integer>> result = new ArrayList<>();
         if(root == null){
-            return level;
+            return result;
         }
-
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-
         while (!queue.isEmpty()){
-            int size = queue.size();;
+            int size = queue.size();
             List<Integer> list = new ArrayList<>();
-
             for (int i = 0; i < size; i++) {
-                TreeNode treeValue = queue.poll();
-                list.add(treeValue.val);
+                TreeNode node = queue.poll();
+                list.add(node.val);
 
-                if (treeValue.left != null) {
-                    queue.add(treeValue.left);
+                if(node.left != null){
+                    queue.add(node.left);
                 }
-                if (treeValue.right != null) {
-                    queue.add(treeValue.right);
+                if(node.right != null){
+                    queue.add(node.right);
                 }
+
             }
-            level.add(list);
+            result.add(0,list);
         }
-        return level;
+        return result;
     }
 }
-
