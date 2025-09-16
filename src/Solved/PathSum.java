@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
+package Solved;
 
 public class PathSum {
     public class TreeNode {
