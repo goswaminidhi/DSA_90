@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class CharacterReplacement {
     public static int characterReplacement(String s, int k) {

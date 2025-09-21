@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class MaximumConsecutive1 {
     public static int longestOnes(int[] nums, int k) {

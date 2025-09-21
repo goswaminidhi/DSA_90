@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 import java.util.HashMap;
 

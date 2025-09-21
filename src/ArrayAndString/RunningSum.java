@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class RunningSum {
     public static int[] runningSum(int[] nums) {

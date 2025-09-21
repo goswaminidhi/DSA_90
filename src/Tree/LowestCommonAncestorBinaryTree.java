@@ -1,4 +1,4 @@
-package Solved;
+package Tree;
 
 public class LowestCommonAncestorBinaryTree {
     public class TreeNode {

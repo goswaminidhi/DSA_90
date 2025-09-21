@@ -1,4 +1,4 @@
-package Solved;
+package Tree;
 
 public class DiameterBinaryTree {
     public class TreeNode {

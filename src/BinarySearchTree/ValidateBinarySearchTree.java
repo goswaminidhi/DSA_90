@@ -1,4 +1,4 @@
-package Solved;
+package BinarySearchTree;
 
 public class ValidateBinarySearchTree {
     public class TreeNode {

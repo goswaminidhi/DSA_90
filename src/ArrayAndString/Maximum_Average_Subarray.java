@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class Maximum_Average_Subarray {
     public static double findMaxAverage(int[] nums, int k) {

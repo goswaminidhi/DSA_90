@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class HeightChecker {
     public static int heightChecker(int[] heights) {

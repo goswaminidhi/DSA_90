@@ -1,11 +1,11 @@
-package Solved;
+package Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class LevelOrderII {
+public class LevelOrder {
     class TreeNode {
         int val;
         TreeNode left;
@@ -24,30 +24,34 @@ public class LevelOrderII {
             this.right = right;
         }
     }
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<>();
+    public List<List<Integer>> levelOrder(TreeNode root) {
+
+        List<List<Integer>> level = new ArrayList<>();
         if(root == null){
-            return result;
+            return level;
         }
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+
         while (!queue.isEmpty()){
-            int size = queue.size();
+            int size = queue.size();;
             List<Integer> list = new ArrayList<>();
+
             for (int i = 0; i < size; i++) {
-                TreeNode node = queue.poll();
-                list.add(node.val);
+                TreeNode treeValue = queue.poll();
+                list.add(treeValue.val);
 
-                if(node.left != null){
-                    queue.add(node.left);
+                if (treeValue.left != null) {
+                    queue.add(treeValue.left);
                 }
-                if(node.right != null){
-                    queue.add(node.right);
+                if (treeValue.right != null) {
+                    queue.add(treeValue.right);
                 }
-
             }
-            result.add(0,list);
+            level.add(list);
         }
-        return result;
+        return level;
     }
 }
+

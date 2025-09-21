@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class ValidPalindromeII {
     public static boolean palindrome(String s,int left,int right){

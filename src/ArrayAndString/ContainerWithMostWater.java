@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class ContainerWithMostWater {
     static{

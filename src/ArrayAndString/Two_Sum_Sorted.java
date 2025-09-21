@@ -1,4 +1,4 @@
-package Solved;
+package ArrayAndString;
 
 public class Two_Sum_Sorted {
     public static int[] twoSum(int[] numbers, int target) {
