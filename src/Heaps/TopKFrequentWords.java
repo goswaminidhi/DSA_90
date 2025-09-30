@@ -35,7 +35,7 @@ public class TopKFrequentWords {
 
         return result;
     }
-    }
+
 
     public static void main(String[] args) {
         String[] words = {"i","love","leetcode","i","love","coding"};
