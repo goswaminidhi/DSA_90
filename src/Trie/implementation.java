@@ -29,13 +29,13 @@ public class implementation {
 
     public boolean search(String word) {
         TrieNode node = root;
-        for (int i = 0; i <word.length(); i++) {
-            int indx = word.charAt(i) - 'a';
+        for (char c : word.toCharArray()) {
+            int indx = c - 'a';
 
             if(node.children[indx] == null){
                 return false;
             }
-            if(i == word.length() - 1 &&  node.children[indx].eow == false ){
+            if(c == word.length() - 1 &&  node.children[indx].eow == false ){
                 return false;
             }
            node = node.children[indx];
