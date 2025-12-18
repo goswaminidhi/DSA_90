@@ -9,6 +9,7 @@ public class Cycle_Graph {
         vis[node] = 1;
         pathVis[node] = 1;
         for (int it : adj.get(node)) {
+
             if(vis[it] == 0){
                 if(dfsCheck(it,adj,vis,pathVis)){
                     return true;
