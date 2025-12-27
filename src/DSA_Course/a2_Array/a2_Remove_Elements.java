@@ -1,8 +1,6 @@
-package DSA_Course.Array;
+package DSA_Course.a2_Array;
 
-import java.util.Arrays;
-
-public class Remove_Elements {
+public class a2_Remove_Elements {
     public static int removeElement(int[] nums, int val) {
         //1 method
 //        Arrays.sort(nums);

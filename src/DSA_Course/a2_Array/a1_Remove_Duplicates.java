@@ -1,6 +1,6 @@
-package DSA_Course.Array;
+package DSA_Course.a2_Array;
 
-public class Remove_Duplicates {
+public class a1_Remove_Duplicates {
     public static int[] removeDuplicate(int[] num){
         if(num.length == 0){
             return new int[0];

@@ -1,6 +1,6 @@
-package DSA_Course.Array;
+package DSA_Course.a1_Basics;
 
-public class Second_Largest {
+public class a1_Second_Largest {
     public static int secondLargest(int[] nums){
         int largest = Integer.MIN_VALUE;
         for (int num : nums) {

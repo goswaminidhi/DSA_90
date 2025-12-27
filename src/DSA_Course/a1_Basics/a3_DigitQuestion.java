@@ -1,8 +1,8 @@
-package DSA_Course;
+package DSA_Course.a1_Basics;
 
 import java.util.Scanner;
 
-public class CountDigit_Reverse_Palindrome {
+public class a3_DigitQuestion {
     public static int countDigit(int num) {
         int count = 0;
         if (num < 0) {
