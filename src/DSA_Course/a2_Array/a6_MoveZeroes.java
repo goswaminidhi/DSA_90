@@ -4,10 +4,9 @@ public class a6_MoveZeroes {
     public static void moveZeroes(int[] nums) {
         int slow = 0;
         for (int i = 0; i < nums.length; i++) {
-            if(nums[i] != 0){
-                int temp = nums[i];;
-                nums[i] = nums[slow];
-                nums[slow] = temp;
+            if(nums[i] != 0){ //Can also do swapping, but it will take the extra space
+                nums[slow] = nums[i];
+                nums[i] = 0;
                 slow++;
             }
         }
