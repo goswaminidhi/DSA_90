@@ -1,6 +1,8 @@
 package DSA_Course.a4_Searching_Sorting;
 
+import java.lang.classfile.components.ClassPrinter;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class a4_SelectionSort {
     private static void selectionSort(int[] arr) {
