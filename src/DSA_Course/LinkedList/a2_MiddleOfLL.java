@@ -1,6 +1,6 @@
 package DSA_Course.LinkedList;
 
-public class a1_MiddleOfLL {
+public class a2_MiddleOfLL {
     private class ListNode {
         int val;
         ListNode next;

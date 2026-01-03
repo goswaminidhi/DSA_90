@@ -2,7 +2,7 @@ package DSA_Course.LinkedList;
 
 import java.util.HashMap;
 
-public class a3_CycleInLL {
+public class a4_CycleInLL {
     private class ListNode {
       int val;
       ListNode next;
@@ -11,6 +11,7 @@ public class a3_CycleInLL {
           next = null;
       }
   }
+    //Method 1 -> Using HashMap
     public boolean hasCycle(ListNode head) {
         if(head == null){
             return false;
@@ -24,6 +25,19 @@ public class a3_CycleInLL {
                 map.put(node, 1);
             }
             node = node.next;
+        }
+        return false;
+    }
+    //Method Two -> Using fast and slow pointer
+    public boolean hasCycle1(ListNode head) {
+        ListNode slow = head;
+        ListNode fast = head;
+        while(slow != null){
+            if(fast == slow){
+                return true;
+            }
+            slow = slow.next;
+            fast = fast.next.next;
         }
         return false;
     }

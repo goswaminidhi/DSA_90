@@ -1,6 +1,6 @@
 package DSA_Course.LinkedList;
 
-public class a2_ReverseOfLL {
+public class a3_ReverseOfLL {
     class ListNode {
         int val;
         ListNode next;
