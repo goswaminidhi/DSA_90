@@ -40,7 +40,7 @@ public class InOrderTraversal {
         return list;
     }
 
-    //Approach 1 - Iteration
+    //Approach 2 - Iteration
     public List<Integer> InorderTraversal2(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> list = new ArrayList<>();
