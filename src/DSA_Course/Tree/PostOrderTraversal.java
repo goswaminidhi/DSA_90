@@ -31,7 +31,7 @@ public class PostOrderTraversal {
         traversal(root,list);
         return list;
     }
-    //Approach 1 - Iteration
+    //Approach 2 - Iteration(Two Stack)
     public List<Integer> postorderTraversal2(TreeNode root) {
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack1 = new Stack<>();
@@ -54,6 +54,31 @@ public class PostOrderTraversal {
         while (!stack2.isEmpty()){
             TreeNode value = stack2.pop();
             list.add(value.val);
+        }
+        return list;
+    }
+    //Approach 3 - Iteration(One Stack)
+    public List<Integer> postorderTraversal3(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if(root == null){
+            return list;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curr = root;
+        TreeNode lastVisited = null;
+       
+        while (curr != null || !stack.isEmpty()){
+            while (curr!= null ){
+                stack.push(curr);
+                curr = curr.left;
+            }
+            TreeNode peekNode = stack.peek();
+            if(peekNode.right != null && lastVisited != peekNode.right){
+               curr =  peekNode.right;
+            }else{
+                list.add(peekNode.val);
+                lastVisited = stack.pop();
+            }
         }
         return list;
     }
