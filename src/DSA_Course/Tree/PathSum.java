@@ -42,4 +42,16 @@ public class PathSum {
             traverse(node.right,newSum,targetSum);
         }
     }
+    public boolean hasPathSum2(TreeNode root, int targetSum) {
+
+        if(root == null){
+            return false;
+        }
+        if(root.left == null && root.right == null){
+            return targetSum == root.val;
+        }
+        boolean leftPahSum = hasPathSum2(root.left,targetSum-root.val);
+        boolean rightPahSum = hasPathSum2(root.right,targetSum-root.val);
+        return leftPahSum || rightPahSum;
+    }
 }
