@@ -89,6 +89,7 @@ public class a2_ExtractFromMinHeap {
         heap.set(j, temp);
     }
 
+
     public void printHeap() {
         System.out.println(heap);
     }

@@ -47,7 +47,6 @@ public class a1_InsertIntoMinHeap {
     public void printHeap() {
         System.out.println(heap);
     }
-
     public static void main(String[] args) {
         a1_InsertIntoMinHeap heap = new a1_InsertIntoMinHeap();
         heap.insert(1);
